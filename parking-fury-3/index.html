@@ -1,0 +1,2911 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parking Fury 3 – Free Underground Parking Game | GamesPlayLand</title>
+<meta name="description" content="Parking Fury 3 takes the series underground. Eight concrete garage levels with pillars, service corridors and tight decks. Play free in your browser.">
+<link rel="canonical" href="https://gamesplayland.com/parking-fury-3/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0a0e14">
+<meta name="color-scheme" content="dark">
+<meta property="og:site_name" content="GamesPlayLand">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Parking Fury 3 – Free Underground Parking Game">
+<meta property="og:description" content="Parking Fury 3 takes the series underground. Eight concrete garage levels with pillars, service corridors and tight decks. Play free in your browser.">
+<meta property="og:url" content="https://gamesplayland.com/parking-fury-3/">
+<meta property="og:image" content="https://gamesplayland.com/assets/og/parking-fury-3.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Parking Fury 3 – Free Underground Parking Game">
+<meta name="twitter:description" content="Parking Fury 3 takes the series underground. Eight concrete garage levels with pillars, service corridors and tight decks. Play free in your browser.">
+<meta name="twitter:image" content="https://gamesplayland.com/assets/og/parking-fury-3.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preload" as="image" href="/assets/thumbs/parking-fury-3.png" fetchpriority="high">
+<style>/* ==========================================================================
+   GamesPlayLand — design system
+   Deep charcoal/navy surfaces, electric lime accent, no external assets.
+   ========================================================================== */
+
+:root {
+  --ink-950: #06090d;
+  --ink-900: #0a0e14;
+  --ink-880: #0c1119;
+  --ink-850: #0f1520;
+  --ink-800: #131b27;
+  --ink-750: #18222f;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.16);
+  --text: #e9eef6;
+  --text-soft: #c3cedd;
+  --muted: #93a2b6;
+  --muted-dim: #6f7f94;
+  --lime: #c6ff2e;
+  --lime-soft: #dcff7a;
+  --lime-ink: #0a0e14;
+  --cyan: #39d0ff;
+  --orange: #ff8a4c;
+  --danger: #ff5f56;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.3);
+  --container: 1200px;
+  --font: "Inter", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 92px;
+}
+
+body {
+  margin: 0;
+  background: var(--ink-900);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 500px at 82% -8%, rgba(198, 255, 46, 0.07), transparent 62%),
+    radial-gradient(700px 420px at 4% 12%, rgba(57, 208, 255, 0.05), transparent 60%),
+    var(--ink-900);
+  pointer-events: none;
+}
+
+img,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  color: var(--lime);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: clamp(2.15rem, 5.2vw, 3.9rem);
+}
+
+h2 {
+  font-size: clamp(1.65rem, 3.1vw, 2.4rem);
+}
+
+h3 {
+  font-size: clamp(1.12rem, 1.7vw, 1.35rem);
+  letter-spacing: -0.015em;
+}
+
+h4 {
+  font-size: 1.02rem;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0 0 1.05em;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin: 0 0 1.1em;
+  padding-left: 1.25em;
+}
+
+li {
+  margin-bottom: 0.45em;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  color: #fff;
+  font-weight: 700;
+}
+
+small {
+  font-size: 0.84rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.5rem 0;
+}
+
+::selection {
+  background: var(--lime);
+  color: var(--lime-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 200;
+  padding: 10px 16px;
+  background: var(--lime);
+  color: var(--lime-ink);
+  font-weight: 800;
+  border-radius: 8px;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+  text-decoration: none;
+}
+
+/* ---------- Layout ------------------------------------------------------ */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
+
+.container--narrow {
+  max-width: 820px;
+}
+
+.section {
+  padding-block: clamp(40px, 6vw, 76px);
+}
+
+.section--tight {
+  padding-block: clamp(28px, 4vw, 48px);
+}
+
+.section--line {
+  border-top: 1px solid var(--line);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  color: var(--lime);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 18px;
+  height: 2px;
+  background: var(--lime);
+  border-radius: 2px;
+}
+
+.lead {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: clamp(1.02rem, 1.4vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(22px, 3vw, 34px);
+}
+
+.section-head p {
+  max-width: 56ch;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.section-head .link-more {
+  flex: none;
+  font-size: 0.92rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* ---------- Buttons ----------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--lime-ink);
+  font-size: 0.97rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.18s var(--ease), background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.btn:hover {
+  background: var(--lime-soft);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(198, 255, 46, 0.22);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: none;
+}
+
+.btn--sm {
+  min-height: 40px;
+  padding: 8px 16px;
+  font-size: 0.88rem;
+}
+
+.btn .icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- Header ------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(7, 10, 15, 0.86);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 68px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex: none;
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--lime);
+  color: var(--lime-ink);
+  font-weight: 900;
+  font-size: 1.28rem;
+  letter-spacing: -0.05em;
+  box-shadow: 0 0 0 1px rgba(198, 255, 46, 0.25), 0 6px 18px rgba(198, 255, 46, 0.14);
+}
+
+.brand-name {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-name b {
+  font-size: 0.98rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+}
+
+.brand-name span {
+  margin-top: 4px;
+  color: var(--muted-dim);
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.site-nav a {
+  padding: 9px 12px;
+  border-radius: 8px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.site-nav a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+  color: var(--lime);
+  background: rgba(198, 255, 46, 0.08);
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: none;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.header-search:focus-within {
+  border-color: rgba(198, 255, 46, 0.55);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.header-search svg {
+  width: 15px;
+  height: 15px;
+  color: var(--muted);
+  flex: none;
+}
+
+.header-search input {
+  width: 132px;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 0.84rem;
+  outline: none;
+}
+
+.header-search input::placeholder {
+  color: var(--muted-dim);
+}
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  padding: 0;
+  place-items: center;
+}
+
+.nav-toggle span {
+  position: relative;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+.nav-toggle span::before,
+.nav-toggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, top 0.2s ease;
+}
+
+.nav-toggle span::before {
+  top: -6px;
+}
+
+.nav-toggle span::after {
+  top: 6px;
+}
+
+.nav-open .nav-toggle span {
+  background: transparent;
+}
+
+.nav-open .nav-toggle span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-open .nav-toggle span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* ---------- Hero -------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(40px, 6vw, 82px);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 70% at 60% 40%, #000 20%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 60% 40%, #000 20%, transparent 75%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: clamp(30px, 5vw, 64px);
+  align-items: center;
+}
+
+.hero-copy h1 {
+  margin-bottom: 18px;
+  text-wrap: balance;
+}
+
+.hero-copy h1 em {
+  font-style: normal;
+  color: var(--lime);
+}
+
+.hero-copy .lead {
+  max-width: 50ch;
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(20px, 4vw, 42px);
+  margin: 32px 0 0;
+  padding: 22px 0 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.hero-stats li {
+  margin: 0;
+}
+
+.hero-stats b {
+  display: block;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero-stats span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hero-art {
+  position: relative;
+}
+
+.hero-art .game-art {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.55);
+  border: 1px solid var(--line-strong);
+}
+
+.hero-art .float-chip {
+  position: absolute;
+  right: -10px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(10, 14, 20, 0.92);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.float-chip .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--lime);
+  box-shadow: 0 0 0 4px rgba(198, 255, 46, 0.15);
+}
+
+/* ---------- Game art / cards -------------------------------------------- */
+
+.game-art {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: var(--ink-850);
+}
+
+.game-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.game-art::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(5, 8, 12, 0.5));
+  pointer-events: none;
+}
+
+a.game-art:hover img {
+  transform: scale(1.035);
+}
+
+.play-orb {
+  position: absolute;
+  z-index: 2;
+  right: 14px;
+  bottom: 14px;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--lime-ink);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s var(--ease);
+}
+
+.play-orb svg {
+  width: 16px;
+  height: 16px;
+  margin-left: 2px;
+}
+
+a.game-art:hover .play-orb {
+  transform: scale(1.08);
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.game-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--ink-850), var(--ink-880));
+  transition: border-color 0.2s ease, transform 0.2s var(--ease), box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  border-color: rgba(198, 255, 46, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.game-card .game-art {
+  border-radius: 0;
+}
+
+.card-badge {
+  position: absolute;
+  z-index: 2;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(6, 9, 13, 0.82);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+.card-badge--lime {
+  background: var(--lime);
+  border-color: var(--lime);
+  color: var(--lime-ink);
+}
+
+.game-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 16px 18px 18px;
+}
+
+.game-card-body h3 {
+  margin-bottom: 6px;
+}
+
+.game-card-body h3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.game-card-body h3 a:hover {
+  color: var(--lime);
+}
+
+.game-card-body p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 14px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-dim);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-meta svg {
+  width: 12px;
+  height: 12px;
+  color: var(--lime);
+}
+
+.game-card--wide {
+  grid-column: span 2;
+}
+
+/* ---------- Category cards ---------------------------------------------- */
+
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.cat-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 178px;
+  padding: 22px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, var(--ink-850), var(--ink-900));
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s var(--ease);
+}
+
+.cat-card:hover {
+  border-color: rgba(198, 255, 46, 0.4);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.cat-card::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  bottom: -50px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(198, 255, 46, 0.14), transparent 65%);
+  pointer-events: none;
+}
+
+.cat-index {
+  color: var(--muted-dim);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.cat-card h3 {
+  margin: 16px 0 6px;
+  font-size: 1.08rem;
+}
+
+.cat-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+.cat-arrow {
+  margin-top: auto;
+  padding-top: 16px;
+  color: var(--lime);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Trust strip ------------------------------------------------- */
+
+.trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--line);
+}
+
+.trust-item {
+  display: flex;
+  gap: 14px;
+  padding: 22px;
+  background: var(--ink-880);
+}
+
+.trust-item svg {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  margin-top: 2px;
+  color: var(--lime);
+}
+
+.trust-item h3 {
+  margin-bottom: 4px;
+  font-size: 0.98rem;
+  letter-spacing: 0;
+}
+
+.trust-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
+/* ---------- Page header ------------------------------------------------- */
+
+.page-head {
+  position: relative;
+  padding-block: clamp(30px, 4.5vw, 56px) clamp(24px, 3.5vw, 40px);
+  border-bottom: 1px solid var(--line);
+}
+
+.page-head--art {
+  overflow: hidden;
+}
+
+.page-head--art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 340px at 85% 10%, rgba(198, 255, 46, 0.1), transparent 65%),
+    linear-gradient(180deg, rgba(19, 27, 39, 0.5), transparent);
+  pointer-events: none;
+}
+
+.page-head .container {
+  position: relative;
+  z-index: 1;
+}
+
+.page-head h1 {
+  max-width: 22ch;
+  margin-bottom: 14px;
+  text-wrap: balance;
+}
+
+.page-head .lead {
+  max-width: 68ch;
+}
+
+.page-head--center {
+  text-align: center;
+}
+
+.page-head--center h1 {
+  margin-inline: auto;
+}
+
+.page-head--center .lead {
+  margin-inline: auto;
+}
+
+.page-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--text-soft);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.chip svg {
+  width: 13px;
+  height: 13px;
+  color: var(--lime);
+}
+
+/* ---------- Breadcrumbs ------------------------------------------------- */
+
+.breadcrumbs {
+  padding-block: 14px 0;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted-dim);
+  font-size: 0.78rem;
+}
+
+.breadcrumbs li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+}
+
+.breadcrumbs li + li::before {
+  content: "/";
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.breadcrumbs a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  color: var(--lime);
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--text-soft);
+}
+
+/* ---------- Game page --------------------------------------------------- */
+
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: clamp(24px, 3vw, 40px);
+  align-items: start;
+}
+
+.game-main {
+  min-width: 0;
+}
+
+.game-stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #05080c;
+  box-shadow: var(--shadow);
+  touch-action: none;
+}
+
+.game-stage canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-facade {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  border: 0;
+  padding: 0;
+  background: #05080c;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.game-facade img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.25s ease, transform 0.5s var(--ease);
+}
+
+.game-facade::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 8, 12, 0.1), rgba(5, 8, 12, 0.72));
+}
+
+.game-facade:hover img {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+.facade-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.facade-play {
+  display: grid;
+  place-items: center;
+  width: clamp(64px, 9vw, 84px);
+  height: clamp(64px, 9vw, 84px);
+  border-radius: 50%;
+  background: var(--lime);
+  color: var(--lime-ink);
+  box-shadow: 0 0 0 8px rgba(198, 255, 46, 0.14), 0 18px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s var(--ease);
+}
+
+.facade-play svg {
+  width: 26px;
+  height: 26px;
+  margin-left: 4px;
+}
+
+.game-facade:hover .facade-play {
+  transform: scale(1.06);
+}
+
+.facade-label {
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.facade-note {
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.game-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 8, 12, 0.94);
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.game-loading[hidden] {
+  display: none;
+}
+
+/* HUD */
+.hud {
+  position: absolute;
+  z-index: 4;
+  inset: 10px 10px auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.is-playing .hud {
+  opacity: 1;
+}
+
+.hud-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hud-pill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(5, 8, 12, 0.78);
+  color: var(--text-soft);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(6px);
+}
+
+.hud-pill b {
+  color: #fff;
+  font-weight: 700;
+}
+
+.hud-pill--star {
+  color: var(--lime);
+}
+
+.damage-track {
+  width: 74px;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.damage-fill {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: 3px;
+  background: var(--lime);
+  transition: width 0.2s ease, background 0.2s ease;
+}
+
+.damage-fill.is-warn {
+  background: var(--orange);
+}
+
+.damage-fill.is-danger {
+  background: var(--danger);
+}
+
+.hud-actions {
+  display: flex;
+  gap: 6px;
+  pointer-events: auto;
+}
+
+.icon-btn {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  background: rgba(5, 8, 12, 0.78);
+  color: var(--text-soft);
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+
+.icon-btn:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.icon-btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Touch controls */
+.touch-controls {
+  position: absolute;
+  z-index: 4;
+  inset: auto 12px 12px;
+  display: none;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.touch-device .touch-controls {
+  display: flex;
+}
+
+.touch-group {
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.touch-btn {
+  display: grid;
+  place-items: center;
+  width: clamp(52px, 12vw, 64px);
+  height: clamp(52px, 12vw, 64px);
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  background: rgba(10, 14, 20, 0.72);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  backdrop-filter: blur(8px);
+}
+
+.touch-btn:active,
+.touch-btn.is-active {
+  background: rgba(198, 255, 46, 0.9);
+  border-color: var(--lime);
+  color: var(--lime-ink);
+}
+
+.touch-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.touch-btn--wide {
+  width: clamp(64px, 15vw, 82px);
+}
+
+/* Game sidebar */
+.game-aside {
+  display: grid;
+  gap: 16px;
+  position: sticky;
+  top: 88px;
+}
+
+.panel {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--ink-880);
+}
+
+.panel h2 {
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.controls-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.controls-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.86rem;
+}
+
+.controls-list li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.controls-list span {
+  color: var(--text-soft);
+}
+
+kbd {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--line-strong);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: var(--ink-800);
+  color: #fff;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.aside-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.aside-links li {
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.aside-links li:last-child {
+  border-bottom: 0;
+}
+
+.aside-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.aside-links a:hover {
+  color: var(--lime);
+}
+
+.aside-links a::after {
+  content: "→";
+  color: var(--muted-dim);
+}
+
+.aside-links li:first-child a {
+  padding-top: 0;
+}
+
+/* Level strip */
+.level-strip {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 14px 2px 6px;
+  scrollbar-width: thin;
+}
+
+.level-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  min-width: 56px;
+  height: 56px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--ink-850);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 800;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+}
+
+.level-btn:hover {
+  border-color: var(--line-strong);
+  color: #fff;
+}
+
+.level-btn[aria-current="true"] {
+  border-color: var(--lime);
+  background: rgba(198, 255, 46, 0.1);
+  color: var(--lime);
+}
+
+.level-btn .stars {
+  margin-top: 2px;
+  color: var(--lime);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.level-btn .stars--empty {
+  color: rgba(255, 255, 255, 0.16);
+}
+
+.game-note {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--muted-dim);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.game-note svg {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  margin-top: 2px;
+  color: var(--lime);
+}
+
+/* ---------- Prose ------------------------------------------------------- */
+
+.prose {
+  max-width: 72ch;
+  color: var(--text-soft);
+  font-size: 1.01rem;
+}
+
+.prose > h2 {
+  margin: 2.1em 0 0.55em;
+  padding-top: 0.2em;
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  scroll-margin-top: 90px;
+}
+
+.prose > h3 {
+  margin: 1.7em 0 0.45em;
+  scroll-margin-top: 90px;
+}
+
+.prose > h2:first-child,
+.prose > h3:first-child {
+  margin-top: 0;
+}
+
+.prose p,
+.prose li {
+  color: var(--text-soft);
+}
+
+.prose a {
+  color: var(--lime);
+  text-decoration: underline;
+  text-decoration-color: rgba(198, 255, 46, 0.35);
+}
+
+.prose a:hover {
+  text-decoration-color: var(--lime);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.3em;
+}
+
+.prose li::marker {
+  color: var(--lime);
+}
+
+.prose table {
+  width: 100%;
+  margin: 1.4em 0;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.prose th,
+.prose td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th {
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.prose tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.prose code {
+  padding: 2px 6px;
+  border-radius: 5px;
+  background: var(--ink-800);
+  color: var(--lime-soft);
+  font-family: var(--mono);
+  font-size: 0.88em;
+}
+
+.prose blockquote {
+  margin: 1.5em 0;
+  padding: 2px 0 2px 18px;
+  border-left: 3px solid var(--lime);
+  color: var(--text-soft);
+}
+
+.prose hr {
+  margin: 2.2em 0;
+}
+
+.prose--wide {
+  max-width: none;
+}
+
+/* Article layout */
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: clamp(26px, 4vw, 56px);
+  align-items: start;
+}
+
+.toc {
+  position: sticky;
+  top: 88px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--ink-880);
+}
+
+.toc h2 {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: toc;
+}
+
+.toc li {
+  counter-increment: toc;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.toc li:last-child {
+  border-bottom: 0;
+}
+
+.toc a {
+  display: flex;
+  gap: 9px;
+  padding: 8px 0;
+  color: var(--text-soft);
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.toc a::before {
+  content: counter(toc, decimal-leading-zero);
+  color: var(--muted-dim);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  padding-top: 2px;
+}
+
+.toc a:hover {
+  color: var(--lime);
+}
+
+.article-foot {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+/* ---------- FAQ --------------------------------------------------------- */
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+  max-width: 820px;
+}
+
+.faq-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--ink-880);
+  transition: border-color 0.2s ease;
+}
+
+.faq-item[open] {
+  border-color: rgba(198, 255, 46, 0.28);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 18px;
+  color: #fff;
+  font-size: 0.97rem;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  flex: none;
+  color: var(--lime);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-item p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- Comparison / info tables ----------------------------------- */
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--ink-880);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.data-table th {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.data-table td {
+  color: var(--text-soft);
+}
+
+.data-table td:first-child {
+  color: #fff;
+  font-weight: 700;
+}
+
+.data-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.data-table a {
+  color: var(--lime);
+  font-weight: 700;
+}
+
+/* ---------- Feature / tip grids ---------------------------------------- */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.feature-card {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(160deg, var(--ink-850), var(--ink-880));
+}
+
+.feature-num {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.feature-card h3 {
+  margin-bottom: 7px;
+  font-size: 1rem;
+  letter-spacing: 0;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.89rem;
+  line-height: 1.55;
+}
+
+.tip-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: tip;
+  border-top: 1px solid var(--line);
+}
+
+.tip-list li {
+  counter-increment: tip;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 16px;
+  margin: 0;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.tip-list li::before {
+  content: counter(tip, decimal-leading-zero);
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding-top: 3px;
+}
+
+.tip-list h3 {
+  margin-bottom: 5px;
+  font-size: 1.02rem;
+  letter-spacing: 0;
+}
+
+.tip-list p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.93rem;
+}
+
+/* ---------- Steps ------------------------------------------------------- */
+
+.steps {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  margin: 0;
+  padding: 18px 20px 18px 62px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--ink-880);
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(198, 255, 46, 0.12);
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ---------- Related / next --------------------------------------------- */
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--ink-880);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s var(--ease);
+}
+
+.related-card:hover {
+  border-color: rgba(198, 255, 46, 0.35);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.related-card img {
+  width: 92px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 8px;
+  flex: none;
+}
+
+.related-card b {
+  display: block;
+  color: #fff;
+  font-size: 0.93rem;
+  line-height: 1.2;
+}
+
+.related-card span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.76rem;
+}
+
+/* ---------- Search ------------------------------------------------------ */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 560px;
+  padding: 6px 6px 6px 16px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--ink-850);
+}
+
+.search-box:focus-within {
+  border-color: rgba(198, 255, 46, 0.55);
+}
+
+.search-box svg {
+  width: 18px;
+  height: 18px;
+  color: var(--muted);
+  flex: none;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: var(--muted-dim);
+}
+
+.search-status {
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.search-empty {
+  padding: 40px 0;
+  color: var(--muted);
+}
+
+/* ---------- Footer ------------------------------------------------------ */
+
+.site-footer {
+  margin-top: clamp(40px, 6vw, 80px);
+  border-top: 1px solid var(--line);
+  background: var(--ink-950);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 32px;
+  padding-block: clamp(36px, 5vw, 56px);
+}
+
+.footer-brand p {
+  max-width: 30ch;
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+
+.footer-col h2 {
+  margin-bottom: 12px;
+  color: var(--muted-dim);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-col li {
+  margin: 0;
+}
+
+.footer-col a {
+  display: inline-block;
+  padding: 4px 0;
+  color: var(--text-soft);
+  font-size: 0.86rem;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  color: var(--lime);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-block: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted-dim);
+  font-size: 0.78rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+.footer-note {
+  max-width: 70ch;
+  margin-top: 12px;
+  color: var(--muted-dim);
+  font-size: 0.74rem;
+  line-height: 1.55;
+}
+
+/* ---------- 404 --------------------------------------------------------- */
+
+.error-page {
+  display: grid;
+  place-items: center;
+  min-height: 62vh;
+  text-align: center;
+}
+
+.error-code {
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.error-page h1 {
+  margin: 10px 0 12px;
+}
+
+.error-page p {
+  max-width: 48ch;
+  margin: 0 auto 24px;
+  color: var(--muted);
+}
+
+/* ---------- Game overlays ----------------------------------------------- */
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background: rgba(4, 7, 11, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: overlay-in 0.22s var(--ease);
+}
+
+@keyframes overlay-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.overlay-card {
+  width: min(430px, 100%);
+  padding: clamp(20px, 3vw, 30px);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: linear-gradient(165deg, #121b27, #0a0f16);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.overlay-kicker {
+  margin: 0 0 10px;
+  color: var(--lime);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.overlay-stars {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 0.16);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.overlay-stars span.is-on {
+  color: var(--lime);
+  text-shadow: 0 0 18px rgba(198, 255, 46, 0.45);
+}
+
+.overlay-stars--fail {
+  color: rgba(255, 95, 86, 0.5);
+}
+
+.overlay-card h2 {
+  margin-bottom: 8px;
+  font-size: clamp(1.3rem, 2.4vw, 1.65rem);
+}
+
+.overlay-sub {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.overlay-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.overlay-actions .btn {
+  min-height: 40px;
+  padding: 8px 15px;
+  font-size: 0.85rem;
+}
+
+/* ---------- Parking Jam DOM layer --------------------------------------- */
+
+.jam-car-btn {
+  position: absolute;
+  z-index: 3;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+}
+
+.jam-car-btn:active {
+  cursor: grabbing;
+}
+
+.jam-car-btn:focus-visible {
+  outline: 2px solid var(--lime);
+  outline-offset: -1px;
+  background: rgba(198, 255, 46, 0.08);
+}
+
+.search-kind {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex: none;
+  border-radius: 10px;
+  background: rgba(198, 255, 46, 0.1);
+  color: var(--lime);
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* Fullscreen game stage */
+.game-stage:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+  background: #05080c;
+}
+
+.game-stage:fullscreen .hud {
+  inset: 16px 16px auto;
+}
+
+.game-stage:fullscreen .touch-controls {
+  inset: auto 20px 20px;
+}
+
+/* ---------- Utilities --------------------------------------------------- */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.stack-sm > * + * {
+  margin-top: 10px;
+}
+
+.stack > * + * {
+  margin-top: 20px;
+}
+
+.mt-0 { margin-top: 0 !important; }
+.mt-1 { margin-top: 8px !important; }
+.mt-2 { margin-top: 16px !important; }
+.mt-3 { margin-top: 24px !important; }
+.mt-4 { margin-top: 32px !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-2 { margin-bottom: 16px !important; }
+
+.text-muted { color: var(--muted); }
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag {
+  padding: 5px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 600;
+}
+
+/* ---------- Responsive -------------------------------------------------- */
+
+@media (max-width: 1080px) {
+  .site-nav a {
+    padding: 9px 9px;
+    font-size: 0.83rem;
+  }
+
+  .header-search input {
+    width: 100px;
+  }
+
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 280px;
+  }
+
+  .footer-top {
+    grid-template-columns: 1.2fr repeat(2, 1fr);
+    row-gap: 28px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    order: -1;
+  }
+
+  .hero-art .float-chip {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .game-grid,
+  .feature-grid,
+  .related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .game-card--wide {
+    grid-column: span 1;
+  }
+
+  .cat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .game-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .game-aside {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .toc {
+    position: static;
+    order: -1;
+  }
+
+  .toc ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+  }
+
+  .trust-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .header-inner {
+    min-height: 62px;
+    gap: 10px;
+  }
+
+  .nav-toggle {
+    display: grid;
+  }
+
+  .header-tools {
+    margin-left: auto;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+    margin: 0;
+    padding: 10px clamp(16px, 4vw, 32px) 18px;
+    border-bottom: 1px solid var(--line);
+    background: rgba(7, 10, 15, 0.98);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-open .site-nav {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 12px 12px;
+    font-size: 0.95rem;
+  }
+
+  .nav-open {
+    position: fixed;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .game-grid,
+  .feature-grid,
+  .related-grid,
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .game-aside {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .hero-stats li {
+    min-width: 40%;
+  }
+
+  .hero-stats b {
+    font-size: 1.25rem;
+  }
+
+  .page-head h1 {
+    max-width: none;
+  }
+
+  .tip-list li {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .related-card img {
+    width: 74px;
+  }
+
+  .toc ol {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .footer-brand {
+    grid-column: span 2;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 11px 12px;
+    font-size: 0.82rem;
+  }
+
+  .prose table {
+    font-size: 0.82rem;
+  }
+
+  .prose th,
+  .prose td {
+    padding: 8px 9px;
+  }
+
+  .game-stage {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-name span {
+    display: none;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ---------- Motion / print --------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #111;
+  }
+
+  .site-header,
+  .site-footer,
+  .game-stage,
+  .game-aside,
+  .toc,
+  .hero-actions,
+  .level-strip {
+    display: none !important;
+  }
+
+  .prose,
+  .prose p,
+  .prose li,
+  .prose td {
+    color: #111;
+  }
+
+  .prose h2,
+  .prose h3,
+  h1 {
+    color: #000;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://gamesplayland.com/"},{"@type":"ListItem","position":2,"name":"Car Parking Games","item":"https://gamesplayland.com/car-parking-games/"},{"@type":"ListItem","position":3,"name":"Parking Fury 3","item":"https://gamesplayland.com/parking-fury-3/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Parking Fury 3","description":"Parking Fury 3 takes the series underground. Eight concrete garage levels with pillars, service corridors and tight decks. Play free in your browser.","url":"https://gamesplayland.com/parking-fury-3/","image":"https://gamesplayland.com/assets/og/parking-fury-3.png","genre":["Parking","Driving","Casual"],"gamePlatform":["Web browser","Desktop","Mobile"],"operatingSystem":"Any modern browser","applicationCategory":"Game","playMode":"SinglePlayer","numberOfPlayers":1,"inLanguage":"en","datePublished":"2026-11-13","dateModified":"2026-11-13","author":{"@type":"Organization","name":"GamesPlayLand","url":"https://gamesplayland.com"},"publisher":{"@type":"Organization","name":"GamesPlayLand","url":"https://gamesplayland.com"},"offers":{"@type":"Offer","price":"0","priceCurrency":"USD","availability":"https://schema.org/InStock"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Parking Fury 3 a 3D game?","acceptedAnswer":{"@type":"Answer","text":"No. It is a top-down 2D game with a garage theme. We do not use the “3D” label because the game is not rendered in 3D."}},{"@type":"Question","name":"How many levels are in Parking Fury 3?","acceptedAnswer":{"@type":"Answer","text":"Eight. Each deck is a distinct layout, and all of them are unlocked from the start."}},{"@type":"Question","name":"Can I play without finishing the first two games?","acceptedAnswer":{"@type":"Answer","text":"Yes. The controls are identical, but the layouts are standalone. If you are new to the series, the first game is the gentler introduction."}},{"@type":"Question","name":"Does it work on mobile?","acceptedAnswer":{"@type":"Answer","text":"Yes, with on-screen controls. The whole deck is framed on screen, so the tighter view does not hide obstacles."}},{"@type":"Question","name":"Is this connected to other games called Parking Fury 3?","acceptedAnswer":{"@type":"Answer","text":"No. This is GamesPlayLand’s own original garage game. Other titles with similar names are made by different developers and are not affiliated with us."}}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark">P</span>
+      <span class="brand-name"><b>GAMESPLAYLAND</b><span>Parking games</span></span>
+      <span class="visually-hidden"> Home</span>
+    </a>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="/">Home</a><a href="/car-parking-games/" aria-current="page">Car Parking</a><a href="/truck-parking-games/">Truck &amp; Bus</a><a href="/parking-puzzle-games/">Puzzle</a><a href="/driving-games/">Driving</a><a href="/best-parking-games/">Guides</a>
+    </nav>
+    <div class="header-tools">
+      <form class="header-search" action="/search/" method="get" role="search">
+        <label class="visually-hidden" for="site-search">Search games and guides</label>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="site-search" type="search" name="q" placeholder="Search games" autocomplete="off">
+      </form>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><div class="container"><ol><li><a href="/">Home</a></li><li><a href="/car-parking-games/">Car Parking Games</a></li><li><span aria-current="page">Parking Fury 3</span></li></ol></div></nav>
+<section class="page-head page-head--art">
+  <div class="container">
+    <p class="eyebrow">Underground garage</p>
+    <h1>Parking Fury 3 – Play Online Free</h1>
+    <p class="lead">Parking Fury 3 moves the series into a multi-storey car park. The lots are smaller, the walls are concrete and the pillars are exactly where you do not want them. Eight levels, one sedan, and far less space to correct a mistake.</p>
+    <div class="page-meta">
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>8 levels</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4.5l3 2"/></svg>1–5 minutes per level</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0M16 5.5a3 3 0 0 1 0 5.8M17.5 14.2A5 5 0 0 1 21 19"/></svg>1 player</span>
+      <span class="chip"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>Medium to hard</span>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="game-layout">
+      <div class="game-main">
+        <div class="game-stage" id="game-stage" data-game="parking-fury-3" data-engine="parking" data-mode="levels">
+  <canvas id="game-canvas" width="1280" height="800" role="img" aria-label="Playable Parking Fury 3 game area"></canvas>
+  <div class="hud" id="game-hud">
+      <div class="hud-group">
+        <span class="hud-pill">Level <b id="hud-level">1</b></span>
+        <span class="hud-pill" id="hud-time">0:00</span><span class="hud-pill">Damage <span class="damage-track"><span class="damage-fill" id="hud-damage"></span></span></span>
+      </div>
+      <div class="hud-actions">
+        <button class="icon-btn" type="button" data-action="pause" aria-label="Pause game" title="Pause (P)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4h4v16H7zM13 4h4v16h-4z"/></svg></button>
+        <button class="icon-btn" type="button" data-action="restart" aria-label="Restart level" title="Restart (R)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10a8 8 0 1 1 2.3 7"/><path d="M4 4v6h6"/></svg></button>
+        <button class="icon-btn" type="button" data-action="fullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5"/></svg></button>
+      </div>
+    </div>
+  <div class="touch-controls" aria-label="Touch controls">
+      <div class="touch-group">
+        <button class="touch-btn" type="button" data-control="left" aria-label="Steer left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+        <button class="touch-btn" type="button" data-control="right" aria-label="Steer right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+      </div>
+      <div class="touch-group">
+        <button class="touch-btn touch-btn--wide" type="button" data-control="handbrake" aria-label="Handbrake">HB</button>
+        <button class="touch-btn touch-btn--wide" type="button" data-control="brake" aria-label="Brake and reverse">▼</button>
+        <button class="touch-btn touch-btn--wide" type="button" data-control="accelerate" aria-label="Accelerate">▲</button>
+      </div>
+    </div>
+  <div class="game-loading" id="game-loading" hidden>Loading game…</div>
+  <button class="game-facade" id="game-facade" type="button" aria-label="Play Parking Fury 3 — Free · keyboard or touch">
+    <img src="/assets/thumbs/parking-fury-3.png" alt="" width="640" height="400" fetchpriority="high" decoding="async">
+    <span class="facade-inner">
+      <span class="facade-play" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+      <span class="facade-label">Play Parking Fury 3</span>
+      <span class="facade-note">Free · keyboard or touch</span>
+    </span>
+  </button>
+</div>
+        <div class="level-strip" id="level-strip" role="group" aria-label="Choose level">
+    <button class="level-btn" type="button" data-level="0" aria-label="Level 1: Level B1" aria-current="true">
+      <span>1</span>
+      <span class="stars stars--empty" data-stars="0" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="1" aria-label="Level 2: Level B1 — Ramp" aria-current="false">
+      <span>2</span>
+      <span class="stars stars--empty" data-stars="1" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="2" aria-label="Level 3: Level B2 — Pillars" aria-current="false">
+      <span>3</span>
+      <span class="stars stars--empty" data-stars="2" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="3" aria-label="Level 4: Level B2 — Reverse" aria-current="false">
+      <span>4</span>
+      <span class="stars stars--empty" data-stars="3" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="4" aria-label="Level 5: Level B3 — Squeeze" aria-current="false">
+      <span>5</span>
+      <span class="stars stars--empty" data-stars="4" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="5" aria-label="Level 6: Level B3 — Full Deck" aria-current="false">
+      <span>6</span>
+      <span class="stars stars--empty" data-stars="5" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="6" aria-label="Level 7: Level B4 — Spiral" aria-current="false">
+      <span>7</span>
+      <span class="stars stars--empty" data-stars="6" aria-hidden="true">★★★</span>
+    </button><button class="level-btn" type="button" data-level="7" aria-label="Level 8: Level B5 — Exam" aria-current="false">
+      <span>8</span>
+      <span class="stars stars--empty" data-stars="7" aria-hidden="true">★★★</span>
+    </button>
+  </div>
+  <p class="game-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 11v5M12 8h.01"/></svg><span>Three stars require a clean run under par. Your best stars are saved in this browser.</span></p>
+        <script type="application/json" id="game-data">{"slug":"parking-fury-3","name":"Parking Fury 3","engine":"parking","mode":"levels","theme":"garage","levels":[{"id":1,"name":"Level B1","hint":"Concrete on every side. The exit stripe points at your bay.","vehicle":"sedan","start":{"x":6,"y":20,"a":0},"bay":{"x":34,"y":7,"a":-90,"l":5.6,"w":2.9},"walls":[{"x":21,"y":-0.5,"w":44,"h":1},{"x":21,"y":28.5,"w":44,"h":1},{"x":-0.5,"y":14,"w":1,"h":28},{"x":42.5,"y":14,"w":1,"h":28}],"cars":[{"x":10,"y":7,"a":-90,"type":"car","color":"#e8edf4"},{"x":14,"y":7,"a":-90,"type":"car","color":"#8fa3b8"},{"x":18,"y":7,"a":-90,"type":"car","color":"#3d6ea8"},{"x":22,"y":7,"a":-90,"type":"car","color":"#b8483f"},{"x":10,"y":24,"a":90,"type":"car","color":"#e8edf4"},{"x":14,"y":24,"a":90,"type":"car","color":"#8fa3b8"}],"cones":[],"par":35,"pillars":[{"x":26,"y":15,"w":3,"h":3}]},{"id":2,"name":"Level B1 — Ramp","hint":"The ramp column narrows the lane to nine metres.","vehicle":"sedan","start":{"x":6,"y":8,"a":0},"bay":{"x":38,"y":22,"a":0,"l":5.6,"w":2.9},"walls":[{"x":23,"y":-0.5,"w":48,"h":1},{"x":23,"y":30.5,"w":48,"h":1},{"x":-0.5,"y":15,"w":1,"h":30},{"x":46.5,"y":15,"w":1,"h":30},{"x":24,"y":15,"w":4,"h":12}],"cars":[{"x":8,"y":26,"a":90,"type":"car","color":"#e8edf4"},{"x":12,"y":26,"a":90,"type":"car","color":"#8fa3b8"}],"cones":[],"par":42,"pillars":[{"x":32,"y":8,"w":2.6,"h":2.6}]},{"id":3,"name":"Level B2 — Pillars","hint":"Six pillars, one bay. Use the widest gap.","vehicle":"sedan","start":{"x":6,"y":26,"a":0},"bay":{"x":42,"y":15,"a":0,"l":5.6,"w":2.9},"walls":[{"x":24,"y":-0.5,"w":50,"h":1},{"x":24,"y":32.5,"w":50,"h":1},{"x":-0.5,"y":16,"w":1,"h":32},{"x":48.5,"y":16,"w":1,"h":32}],"cars":[{"x":10,"y":5,"a":-90,"type":"car","color":"#e8edf4"},{"x":14,"y":5,"a":-90,"type":"car","color":"#8fa3b8"},{"x":18,"y":5,"a":-90,"type":"car","color":"#3d6ea8"}],"cones":[],"par":48,"pillars":[{"x":16,"y":10,"w":2.8,"h":2.8},{"x":16,"y":22,"w":2.8,"h":2.8},{"x":28,"y":10,"w":2.8,"h":2.8},{"x":28,"y":22,"w":2.8,"h":2.8}]},{"id":4,"name":"Level B2 — Reverse","hint":"Back into the bay against the left wall. Watch the pillar.","vehicle":"sedan","start":{"x":34,"y":20,"a":180},"bay":{"x":6,"y":6,"a":180,"l":5.6,"w":2.9},"walls":[{"x":23,"y":-0.5,"w":48,"h":1},{"x":23,"y":30.5,"w":48,"h":1},{"x":-0.5,"y":15,"w":1,"h":30},{"x":46.5,"y":15,"w":1,"h":30}],"cars":[{"x":14,"y":6,"a":-90,"type":"car","color":"#e8edf4"},{"x":18,"y":6,"a":-90,"type":"car","color":"#8fa3b8"},{"x":22,"y":6,"a":-90,"type":"car","color":"#3d6ea8"},{"x":34,"y":26,"a":90,"type":"car","color":"#e8edf4"},{"x":38,"y":26,"a":90,"type":"car","color":"#8fa3b8"}],"cones":[],"par":50,"pillars":[{"x":22,"y":15,"w":3,"h":3}]},{"id":5,"name":"Level B3 — Squeeze","hint":"A service corridor with two tight corners.","vehicle":"sedan","start":{"x":6,"y":24,"a":0},"bay":{"x":42,"y":8,"a":-90,"l":5.6,"w":2.9},"walls":[{"x":24,"y":-0.5,"w":50,"h":1},{"x":24,"y":30.5,"w":50,"h":1},{"x":-0.5,"y":15,"w":1,"h":30},{"x":48.5,"y":15,"w":1,"h":30},{"x":20,"y":12,"w":2,"h":22},{"x":34,"y":18,"w":2,"h":20}],"cars":[{"x":10,"y":27,"a":90,"type":"car","color":"#e8edf4"},{"x":14,"y":27,"a":90,"type":"car","color":"#8fa3b8"}],"cones":[],"par":55},{"id":6,"name":"Level B3 — Full Deck","hint":"Every row is occupied except one. Find the lit bay.","vehicle":"sedan","start":{"x":6,"y":28,"a":0},"bay":{"x":26,"y":16,"a":-90,"l":5.6,"w":2.9},"walls":[{"x":23,"y":-0.5,"w":48,"h":1},{"x":23,"y":34.5,"w":48,"h":1},{"x":-0.5,"y":17,"w":1,"h":34},{"x":46.5,"y":17,"w":1,"h":34}],"cars":[{"x":8,"y":16,"a":-90,"type":"car","color":"#e8edf4"},{"x":12,"y":16,"a":-90,"type":"car","color":"#8fa3b8"},{"x":16,"y":16,"a":-90,"type":"car","color":"#3d6ea8"},{"x":20,"y":16,"a":-90,"type":"car","color":"#b8483f"},{"x":30,"y":16,"a":-90,"type":"car","color":"#2f3b46"},{"x":34,"y":16,"a":-90,"type":"car","color":"#c9a227"},{"x":38,"y":16,"a":-90,"type":"car","color":"#5c8f6a"},{"x":42,"y":16,"a":-90,"type":"car","color":"#e8edf4"},{"x":10,"y":5,"a":-90,"type":"car","color":"#e8edf4"},{"x":14,"y":5,"a":-90,"type":"car","color":"#8fa3b8"},{"x":18,"y":5,"a":-90,"type":"car","color":"#3d6ea8"},{"x":22,"y":5,"a":-90,"type":"car","color":"#b8483f"}],"cones":[],"par":50,"pillars":[{"x":22,"y":26,"w":3,"h":3}]},{"id":7,"name":"Level B4 — Spiral","hint":"Drive the loop in one direction. Reversing costs you time.","vehicle":"sedan","start":{"x":6,"y":6,"a":0},"bay":{"x":40,"y":24,"a":180,"l":5.6,"w":2.9},"walls":[{"x":24,"y":-0.5,"w":50,"h":1},{"x":24,"y":32.5,"w":50,"h":1},{"x":-0.5,"y":16,"w":1,"h":32},{"x":48.5,"y":16,"w":1,"h":32},{"x":20,"y":14,"w":2,"h":20},{"x":32,"y":20,"w":2,"h":22}],"cars":[{"x":10,"y":28,"a":90,"type":"car","color":"#e8edf4"},{"x":14,"y":28,"a":90,"type":"car","color":"#8fa3b8"}],"cones":[{"x":36,"y":10},{"x":36,"y":14}],"par":58},{"id":8,"name":"Level B5 — Exam","hint":"Narrow bay, two neighbours and a pillar. The full garage test.","vehicle":"sedan","start":{"x":6,"y":28,"a":0},"bay":{"x":40,"y":16,"a":-90,"l":5.6,"w":2.9},"walls":[{"x":24,"y":-0.5,"w":50,"h":1},{"x":24,"y":34.5,"w":50,"h":1},{"x":-0.5,"y":17,"w":1,"h":34},{"x":48.5,"y":17,"w":1,"h":34}],"cars":[{"x":36.5,"y":16,"a":-90,"type":"car","color":"#3d6ea8"},{"x":43.5,"y":16,"a":-90,"type":"car","color":"#8fa3b8"},{"x":10,"y":31,"a":90,"type":"car","color":"#e8edf4"},{"x":14,"y":31,"a":90,"type":"car","color":"#8fa3b8"},{"x":18,"y":31,"a":90,"type":"car","color":"#3d6ea8"}],"cones":[],"par":65,"pillars":[{"x":26,"y":16,"w":3,"h":3}]}],"vehicles":{"car":{"length":4.4,"width":1.85,"wheelbase":2.6,"maxSpeed":8,"reverseSpeed":3,"accel":7,"brake":12,"maxSteer":0.56},"sedan":{"length":4.4,"width":1.85,"wheelbase":2.6,"maxSpeed":8,"reverseSpeed":3,"accel":7,"brake":12,"maxSteer":0.56},"truck":{"length":8.4,"width":2.5,"wheelbase":4.6,"maxSpeed":6.5,"reverseSpeed":2.4,"accel":4.5,"brake":8,"maxSteer":0.6},"bus":{"length":11,"width":2.55,"wheelbase":5.4,"maxSpeed":6.5,"reverseSpeed":2.2,"accel":4,"brake":7,"maxSteer":0.6}}}</script>
+      </div>
+      <aside class="game-aside" aria-label="Game information">
+        <div class="panel">
+          <h2>Controls</h2>
+          <ul class="controls-list">
+            <li><span>Accelerate</span><span><kbd>W</kbd> <kbd>↑</kbd></span></li><li><span>Brake / reverse</span><span><kbd>S</kbd> <kbd>↓</kbd></span></li><li><span>Steer left / right</span><span><kbd>A</kbd> <kbd>D</kbd> <kbd>←</kbd> <kbd>→</kbd></span></li><li><span>Handbrake</span><span><kbd>Space</kbd></span></li><li><span>Restart level</span><span><kbd>R</kbd></span></li><li><span>Pause</span><span><kbd>P</kbd> <kbd>Escape</kbd></span></li><li><span>Fullscreen</span><span><kbd>F</kbd></span></li>
+          </ul>
+        </div>
+        <div class="panel">
+  <h2>Star scoring</h2>
+  <ul class="aside-links">
+    <li><span style="display:flex;justify-content:space-between;gap:8px;padding:8px 0;font-size:.86rem;"><span style="color:var(--lime);font-weight:800;">★★★</span><span style="color:var(--text-soft);">No damage + under par</span></span></li>
+    <li><span style="display:flex;justify-content:space-between;gap:8px;padding:8px 0;font-size:.86rem;"><span style="color:var(--lime);font-weight:800;">★★☆</span><span style="color:var(--text-soft);">Up to 2 impacts</span></span></li>
+    <li><span style="display:flex;justify-content:space-between;gap:8px;padding:8px 0;font-size:.86rem;"><span style="color:var(--lime);font-weight:800;">★☆☆</span><span style="color:var(--text-soft);">Any clean finish</span></span></li>
+  </ul>
+  <p style="margin:12px 0 0;color:var(--muted-dim);font-size:.78rem;line-height:1.5;">Each impact adds 15 damage. At 100 the run ends. Stars are saved in this browser.</p>
+</div>
+        <div class="panel">
+          <h2>More games</h2>
+          <ul class="aside-links">
+            <li><a href="/parking-fury/">Parking Fury</a></li><li><a href="/parking-fury-2/">Parking Fury 2</a></li><li><a href="/truck-parking/">Truck Parking</a></li><li><a href="/bus-parking/">Bus Parking</a></li><li><a href="/parking-jam/">Parking Jam</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prose">
+      <h2>About Parking Fury 3</h2>
+      <p>An underground garage removes the two things that make outdoor parking forgiving: long approach lanes and open space to reset your angle. Every level in Parking Fury 3 is built around a pillar, a service corridor or a deck edge, and the clean line usually requires one deliberate reverse.</p>
+<p>The handling model is unchanged from the first two games. What changes is the margin. Bays are often flanked on three sides, and a late turn that would cost you a scratch outdoors will cost you a wing mirror here. The damage meter is the same, but you will feel it more.</p>
+<p>Eight levels is a deliberate choice. Each one is a distinct garage problem — ramp column, reverse bay, squeeze corridor, spiral — rather than a variation on the same open lot. Clear all eight and you have genuinely learned to park in a tight structure.</p>
+      <h2>How to play</h2>
+      <ol class="steps">
+        <li>Press play and choose a deck from the level strip. All eight are available immediately.</li><li>Identify the pillars first. They define the route more than the walls do.</li><li>Keep one car width from the concrete on the outside of every turn.</li><li>Enter the bay slowly enough to stop within half a metre. The green marker confirms the position.</li><li>Finish without damage for a clean run, then replay for the par time and three stars.</li>
+      </ol>
+      <h2>Controls in detail</h2>
+      <p>On touch devices the garage view scales to fit, and the controls become two pedals plus a steering pair. Pillars stay visible because the camera always frames the whole deck.</p>
+      <table>
+        <thead><tr><th>Action</th><th>Keys</th></tr></thead>
+        <tbody>
+          <tr><td>Accelerate</td><td><kbd>W</kbd> <kbd>↑</kbd></td></tr><tr><td>Brake / reverse</td><td><kbd>S</kbd> <kbd>↓</kbd></td></tr><tr><td>Steer left / right</td><td><kbd>A</kbd> <kbd>D</kbd> <kbd>←</kbd> <kbd>→</kbd></td></tr><tr><td>Handbrake</td><td><kbd>Space</kbd></td></tr><tr><td>Restart level</td><td><kbd>R</kbd></td></tr><tr><td>Pause</td><td><kbd>P</kbd> <kbd>Escape</kbd></td></tr><tr><td>Fullscreen</td><td><kbd>F</kbd></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line">
+  <div class="container">
+    <p class="eyebrow">What is inside</p>
+    <h2 class="mb-2">Features</h2>
+    <div class="feature-grid">
+      <article class="feature-card">
+        <span class="feature-num">01</span>
+        <h3>Eight garage decks</h3>
+        <p>Ramp columns, reverse bays, service corridors and a spiral exit, each with its own layout.</p>
+      </article><article class="feature-card">
+        <span class="feature-num">02</span>
+        <h3>Pillars that matter</h3>
+        <p>Concrete columns sit inside the driving line, not at the edges, so your route has to bend around them.</p>
+      </article><article class="feature-card">
+        <span class="feature-num">03</span>
+        <h3>Three-sided bays</h3>
+        <p>Several slots are enclosed on three sides, turning every park into a controlled reverse.</p>
+      </article><article class="feature-card">
+        <span class="feature-num">04</span>
+        <h3>Concrete palette</h3>
+        <p>A cooler, darker look that makes the bay markings and your own car easier to read.</p>
+      </article><article class="feature-card">
+        <span class="feature-num">05</span>
+        <h3>Clean-run scoring</h3>
+        <p>The same three-star system: no damage and under par is the only perfect result.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--line">
+  <div class="container">
+    <p class="eyebrow">Play better</p>
+    <h2 class="mb-2">Tips from the test bench</h2>
+    <ol class="tip-list">
+      <li>
+        <div><h3>Pillars are the route</h3><p>Do not aim at the bay until you have cleared the last pillar. Plan the path between columns first.</p></div>
+      </li><li>
+        <div><h3>Reverse into three-sided bays</h3><p>If a bay is closed at the far end, driving in nose-first leaves you unable to straighten. Back in instead.</p></div>
+      </li><li>
+        <div><h3>Watch the rear quarter</h3><p>The back corner of the car cuts inside the front wheels. In a garage, that corner is usually nearest the concrete.</p></div>
+      </li><li>
+        <div><h3>Straighten before you enter</h3><p>A car that is still turning when it crosses the bay line will not fit. Complete the turn, pause, then move straight.</p></div>
+      </li><li>
+        <div><h3>Use the handbrake to settle</h3><p>A tap of the handbrake at walking pace stops the car without a nose dip, which keeps your aim steady.</p></div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--line">
+  <div class="container">
+    <p class="eyebrow">Level by level</p>
+    <h2 class="mb-2">Level list</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <thead><tr><th>#</th><th>Name</th><th>Focus</th><th>Par time</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Level B1</td><td>A first garage bay with one central pillar</td><td>35s</td></tr><tr><td>2</td><td>Level B1 — Ramp</td><td>A ramp column narrows the lane</td><td>42s</td></tr><tr><td>3</td><td>Level B2 — Pillars</td><td>Four columns around a side bay</td><td>48s</td></tr><tr><td>4</td><td>Level B2 — Reverse</td><td>Backing into a bay against the wall</td><td>50s</td></tr><tr><td>5</td><td>Level B3 — Squeeze</td><td>A service corridor with two corners</td><td>55s</td></tr><tr><td>6</td><td>Level B3 — Full Deck</td><td>One lit bay in a full row</td><td>50s</td></tr><tr><td>7</td><td>Level B4 — Spiral</td><td>A looping route with a late exit</td><td>58s</td></tr><tr><td>8</td><td>Level B5 — Exam</td><td>Narrow bay, two neighbours and a pillar</td><td>65s</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="mt-2"><a href="/parking-fury-tips/">See the category guide</a></p>
+  </div>
+</section>
+
+<section class="section section--line" aria-labelledby="faq-heading">
+  <div class="container">
+    <p class="eyebrow">Answers</p>
+    <h2 id="faq-heading" class="mb-2">Parking Fury 3 questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Is Parking Fury 3 a 3D game?</summary>
+        <p>No. It is a top-down 2D game with a garage theme. We do not use the “3D” label because the game is not rendered in 3D.</p>
+      </details><details class="faq-item">
+        <summary>How many levels are in Parking Fury 3?</summary>
+        <p>Eight. Each deck is a distinct layout, and all of them are unlocked from the start.</p>
+      </details><details class="faq-item">
+        <summary>Can I play without finishing the first two games?</summary>
+        <p>Yes. The controls are identical, but the layouts are standalone. If you are new to the series, the first game is the gentler introduction.</p>
+      </details><details class="faq-item">
+        <summary>Does it work on mobile?</summary>
+        <p>Yes, with on-screen controls. The whole deck is framed on screen, so the tighter view does not hide obstacles.</p>
+      </details><details class="faq-item">
+        <summary>Is this connected to other games called Parking Fury 3?</summary>
+        <p>No. This is GamesPlayLand’s own original garage game. Other titles with similar names are made by different developers and are not affiliated with us.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<section class="section section--line" aria-labelledby="related-heading">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="eyebrow">Keep playing</p>
+        <h2 id="related-heading">More original parking games</h2>
+      </div>
+      <a class="link-more" href="/car-parking-games/">All parking games <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="related-grid">
+      <a class="related-card" href="/parking-fury/">
+        <img src="/assets/thumbs/parking-fury.png" alt="" width="640" height="400" loading="lazy" decoding="async">
+        <span><b>Parking Fury</b><span>Car parking · 12 levels</span></span>
+      </a><a class="related-card" href="/parking-fury-2/">
+        <img src="/assets/thumbs/parking-fury-2.png" alt="" width="640" height="400" loading="lazy" decoding="async">
+        <span><b>Parking Fury 2</b><span>Car parking · 10 levels</span></span>
+      </a><a class="related-card" href="/truck-parking/">
+        <img src="/assets/thumbs/truck-parking.png" alt="" width="640" height="400" loading="lazy" decoding="async">
+        <span><b>Truck Parking</b><span>Truck &amp; bus · 5 levels</span></span>
+      </a><a class="related-card" href="/bus-parking/">
+        <img src="/assets/thumbs/bus-parking.png" alt="" width="640" height="400" loading="lazy" decoding="async">
+        <span><b>Bus Parking</b><span>Truck &amp; bus · 5 levels</span></span>
+      </a><a class="related-card" href="/parking-jam/">
+        <img src="/assets/thumbs/parking-jam.png" alt="" width="640" height="400" loading="lazy" decoding="async">
+        <span><b>Parking Jam</b><span>Parking puzzle · 8 puzzles</span></span>
+      </a><a class="related-card" href="/free-drive/">
+        <img src="/assets/thumbs/free-drive.png" alt="" width="640" height="400" loading="lazy" decoding="async">
+        <span><b>Free Drive</b><span>Driving · 1 levels</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <p class="footer-note" style="max-width: 78ch; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line);">
+    <strong>Original game notice:</strong> every game on GamesPlayLand is built in-house by our own team. They are not copies, ports or reuploads of any other game, and we are not affiliated with any developer or publisher behind a similarly named title, including the 2016 browser game <em>Parking Fury</em>. Artwork is generated procedurally and no third-party game files are used.
+  </p>
+</div>
+<script type="module" src="/assets/js/game-boot.js"></script>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="/">
+          <span class="brand-mark">P</span>
+          <span class="brand-name"><b>GAMESPLAYLAND</b><span>Parking games</span></span>
+          <span class="visually-hidden"> Home</span>
+        </a>
+        <p>Original browser parking games. Built in-house, tested before release, free to play without an account.</p>
+        <p class="footer-note">GamesPlayLand is an independent game studio. Our games are original works and are not affiliated with, endorsed by, or connected to any other game, developer or publisher with a similar name.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Play</h2>
+        <ul><li><a href="/parking-fury/">Parking Fury</a></li><li><a href="/parking-fury-2/">Parking Fury 2</a></li><li><a href="/parking-fury-3/">Parking Fury 3</a></li><li><a href="/truck-parking/">Truck Parking</a></li><li><a href="/bus-parking/">Bus Parking</a></li><li><a href="/parking-jam/">Parking Jam</a></li><li><a href="/free-drive/">Free Drive</a></li></ul>
+      </div><div class="footer-col">
+        <h2>Browse</h2>
+        <ul><li><a href="/car-parking-games/">Car parking games</a></li><li><a href="/truck-parking-games/">Truck &amp; bus parking</a></li><li><a href="/parking-puzzle-games/">Parking puzzles</a></li><li><a href="/driving-games/">Driving games</a></li><li><a href="/best-parking-games/">Best parking games</a></li><li><a href="/games-like-parking-fury/">Games like Parking Fury</a></li></ul>
+      </div><div class="footer-col">
+        <h2>Guides</h2>
+        <ul><li><a href="/parking-fury-controls/">Parking Fury controls</a></li><li><a href="/parking-fury-tips/">Parking Fury tips</a></li><li><a href="/parking-fury-levels/">Parking Fury levels</a></li><li><a href="/parking-fury-walkthrough/">Parking Fury walkthrough</a></li></ul>
+      </div><div class="footer-col">
+        <h2>Site</h2>
+        <ul><li><a href="/search/">Search</a></li><li><a href="/about-us/">About us</a></li><li><a href="/contact-us/">Contact</a></li><li><a href="/privacy-policy/">Privacy policy</a></li><li><a href="/terms-of-use/">Terms of use</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 GamesPlayLand. All rights reserved.</p>
+      <p>Made for keyboard, touch and small screens.</p>
+    </div>
+  </div>
+</footer>
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
