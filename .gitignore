@@ -1,0 +1,16 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+
+# Logs and local env
+*.log
+.env
+.env.*
+
+# Dependencies (the project itself has none)
+node_modules/
+
+# Build-time scratch scripts
+_patch-perf.cjs

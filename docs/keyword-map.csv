@@ -1,0 +1,29 @@
+group,keyword,intent,url,competition,notes
+A,parking fury,play,https://gamesplayland.com/parking-fury/,High,Primary entity page; 12 original levels; non-affiliation disclaimer
+A,parking fury game,play,https://gamesplayland.com/parking-fury/,High,Same intent as head term
+A,play parking fury,play,https://gamesplayland.com/parking-fury/,High,Action intent
+A,parking fury 2,play,https://gamesplayland.com/parking-fury-2/,High,Sequel; 10 night levels
+A,parking fury 3,play,https://gamesplayland.com/parking-fury-3/,High,Sequel; 8 garage levels
+A,parking games,play,https://gamesplayland.com/,High,Home destination
+A,free parking games,play,https://gamesplayland.com/,High,Free and no-download intent
+A,car parking games,browse,https://gamesplayland.com/car-parking-games/,High,Category hub
+B,parking fury controls,informational,https://gamesplayland.com/parking-fury-controls/,Medium,Real keyboard and touch controls
+B,parking fury tips,informational,https://gamesplayland.com/parking-fury-tips/,Medium,Technique guide
+B,parking fury levels,informational,https://gamesplayland.com/parking-fury-levels/,Medium,Exact 12-level breakdown
+B,parking fury walkthrough,informational,https://gamesplayland.com/parking-fury-walkthrough/,Medium,Level-by-level approach
+B,best parking games,comparison,https://gamesplayland.com/best-parking-games/,Medium,Honest selection methodology
+B,games like parking fury,comparison,https://gamesplayland.com/games-like-parking-fury/,Medium,Adjacent discovery
+B,truck parking games,browse,https://gamesplayland.com/truck-parking-games/,Medium,Category hub
+B,truck parking,play,https://gamesplayland.com/truck-parking/,Medium,8.4 m rig; 5 levels
+B,bus parking game,play,https://gamesplayland.com/bus-parking/,Medium,11 m bus; 5 levels
+B,parking puzzle games,browse,https://gamesplayland.com/parking-puzzle-games/,Medium,Category hub
+B,parking jam,play,https://gamesplayland.com/parking-jam/,Medium,6x6 sliding-block interpretation; 8 puzzles
+B,driving games,browse,https://gamesplayland.com/driving-games/,High,Category hub
+B,driving sandbox,play,https://gamesplayland.com/free-drive/,Low,No-timer sandbox
+B,parking games mobile,play,https://gamesplayland.com/car-parking-games/,Medium,Touch controls covered on game pages
+C,gamesplayland,navigational,https://gamesplayland.com/,Low,Brand home
+C,gamesplayland about,navigational,https://gamesplayland.com/about-us/,Low,Originality and non-affiliation statement
+C,gamesplayland contact,navigational,https://gamesplayland.com/contact-us/,Low,Single verified email
+C,gamesplayland privacy policy,navigational,https://gamesplayland.com/privacy-policy/,Low,Local-only storage; no trackers
+C,gamesplayland terms of use,navigational,https://gamesplayland.com/terms-of-use/,Low,Personal play licence
+C,site search,utility,https://gamesplayland.com/search/,Low,noindex; utility page

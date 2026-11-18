@@ -1,0 +1,14 @@
+{
+  "name": "gamesplayland",
+  "version": "1.0.0",
+  "private": true,
+  "description": "GamesPlayLand static parking game portal with original browser games.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "validate": "node scripts/validate-levels.mjs",
+    "qa": "node scripts/qa.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check": "node scripts/validate-levels.mjs && node build.mjs && node scripts/qa.mjs"
+  }
+}
