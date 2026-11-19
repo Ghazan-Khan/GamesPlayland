@@ -119,6 +119,28 @@ Provider notes:
 
 Before going live, replace the placeholder contact email in `src/site.config.mjs` with a real monitored address and rebuild. The email currently in source is `hello@gamesplayland.com`; it is the single point of contact published on the contact page.
 
+### Live deployment — Hostinger (19 November 2026)
+
+The site is deployed from GitHub to the Hostinger website `tiny-antiquewhite-gaur-52.hostingersite.com`.
+
+- Repository: `https://github.com/Ghazan-Khan/GamesPlayland`
+- Connected branch: `main` (source commit `ce8b8da`)
+- Hostinger build configuration: framework preset **Other**, Node 22.x, root directory `./`, build command `npm run build`, **output directory `dist`**, no entry file, no environment variables.
+- A separate `hostinger` branch (`8cc70a0`) holds the built site at the repository root as an alternative layout for hosts that do not run a build step.
+- Deployment log confirmed: repository cloned, `npm install` (0 vulnerabilities), `npm run build` completed (23 pages + 404, 7 games, 22 sitemap URLs), output published from `dist`.
+
+Verified on the live domain:
+
+- Home and all checked game/category/guide/search/trust routes render with correct titles, H1s and canonicals.
+- Game engines lazy-load on Play click; Parking Fury canvas renders and its timer advances; no console errors.
+- JS modules, thumbnails, sitemap and webmanifest all return 200.
+- `404.html` is present and renders our custom 404 page when opened directly.
+
+Two Hostinger preview-domain behaviours to be aware of:
+
+1. Unknown URLs currently return Hostinger's own generic 404 page (HTTP 404) rather than our `404.html`. The file is deployed correctly; mapping it as the host-level error document must be done once the production domain is attached.
+2. `/robots.txt` on the preview domain is overridden by Hostinger with a `Googlebot: Disallow: /` rule. Our own `robots.txt` (allow all, disallow `/search/`, with sitemap) is deployed in `public_html` and will be the one served when the production domain `gamesplayland.com` is connected.
+
 ## 6. Blockers and open items
 
 **No hard blockers.** The site builds, validates and passes QA and Lighthouse.
